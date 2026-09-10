@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DCCT AI Tutor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <div class="header">
+
+            <div>
+                <h1>🤖 DCCT AI Tutor</h1>
+
+                <p>
+                    Digital Communication and Coding Theory Assistant
+                </p>
+            </div>
+
+            <button id="clear-button" onclick="clearChat()">
+                Clear Chat
+            </button>
+
+        </div>
+
+
+        <div id="chat-box" class="chat-box">
+
+            <div class="message tutor-message">
+                👋 Hi! I'm your DCCT AI Tutor.
+                Ask me anything about Digital Communication
+                or Coding Theory.
+            </div>
+
+        </div>
+
+
+        <div class="input-area">
+            <input type="text" id="question" placeholder="Ask a DCCT question..." autocomplete="off">
+            <button id="ask-button" onclick="askQuestion()">Ask</button>
+        </div>
+
+        <div class="quiz-area">
+            <button id="quiz-button" onclick="startQuiz()">🎯 Quiz Me</button>
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
