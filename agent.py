@@ -8,6 +8,9 @@ load_dotenv()
 # Get Hugging Face token
 token = os.getenv("HF_TOKEN")
 
+if token:
+    token = token.strip()
+
 if not token:
     raise ValueError("HF_TOKEN not found. Check your .env file.")
 
